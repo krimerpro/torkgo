@@ -5,14 +5,10 @@
   </head>
 
   <body>
-     <header class="row">
-         @include('includes.header')
-     </header>
+     @include('includes.header')
 
      @yield('content')
 
-     <footer class="row">
-         @include('includes.footer')
-     </footer>
+     @include('includes.footer')
   </body>
 </html>

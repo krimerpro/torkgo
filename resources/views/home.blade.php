@@ -1,332 +1,639 @@
 @extends('layouts.default')
 @section('content')
 
-<!-- Feature-section -->
-<div class="feature-section pb-70 section-to-header">
-    <div class="container">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-3 pb-30">
-                    <div class="feature-card">
-                        <div class="feature-card-header">
-                            <div class="feature-card-thumb feature-card-thumb-green">
-                                <i class="flaticon-machine-learning-1"></i>
-                            </div>
-                            <span>Low Tax</span>
-                        </div>
-                        <div class="feature-card-body">
-                            <p>4% Tax Buy & Sell</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 pb-30">
-                    <div class="feature-card">
-                        <div class="feature-card-header">
-                            <div class="feature-card-thumb feature-card-thumb-yellow">
-                                <i class="flaticon-voice-recognition"></i>
-                            </div>
-                            <span>Anti Whale & Dump</span>
-                        </div>
-                        <div class="feature-card-body">
-                            <p>4% Max Wallet & Transaction</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 pb-30">
-                    <div class="feature-card">
-                        <div class="feature-card-header">
-                            <div class="feature-card-thumb feature-card-thumb-blue">
-                                <i class="flaticon-machine-learning"></i>
-                            </div>
-                            <span>Low of Supply</span>
-                        </div>
-                        <div class="feature-card-body">
-                            <p>50.000.000 $Erudex Tokens</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 pb-30">
-                    <div class="feature-card">
-                        <div class="feature-card-header">
-                            <div class="feature-card-thumb feature-card-thumb-violet">
-                                <i class="flaticon-processor"></i>
-                            </div>
-                            <span>Initial Liquidity</span>
-                        </div>
-                        <div class="feature-card-body">
-                            <p>2 BNB for Liquidity</p>
-                        </div>
-                    </div>
-                </div>
+<!-- connect wallet modal start -->
+<div class="wallet-modal modal fade" id="wallet-option" tabindex="-1" aria-labelledby="choose-wallet"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="choose-wallet">Connect Your Wallet</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Please select a wallet from below to connect!</p>
+                <ul class="wallet__list">
+                    <li class="wallet__list-item"><a href="#"> <span><img src="{{ asset('images/wallet/metamask.svg') }}" alt="metamask">
+                            </span> </a></li>
+                    <li class="wallet__list-item"><a href="#"> <span><img src="{{ asset('images/wallet/coinbase.svg') }}" alt="coinbase">
+                            </span> </a></li>
+                    <li class="wallet__list-item"><a href="#"> <span><img src="{{ asset('images/wallet/bitski.svg') }}" alt="bitski">
+                            </span></a></li>
+                    <li class="wallet__list-item"><a href="#"> <span><img src="{{ asset('images/wallet/venly.svg') }}" alt="venly Wallet">
+                            </span></a></li>
+                    <li class="wallet__list-item"><a href="#"> <span><img src="{{ asset('images/wallet/wallet-connect.svg') }}" alt=" Wallet connect">
+                            </span></a></li>
+                </ul>
+                <p>By connecting your wallet, you agree to our <a href="#">Terms of Service</a> and our <a
+                        href="#">Privacy Policy</a> .</p>
             </div>
         </div>
     </div>
 </div>
-<!-- Feature-section -->
-<!-- About-section -->
-<section class="about-section bg-off-white pt-100 pb-70" id="about">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 pb-30">
-                <div class="about-section-item about-item-image text-center">
-                    <img src="{{ asset('images/feature-shape/feature-shape-1.png') }}" alt="shape">
-                </div>
-            </div>
-            <div class="col-lg-6 pb-30">
-                <div class="about-section-item about-item-details">
-                    <div class="section-title section-title-left text-start">
-                        <small>About Us</small>
-                        <h2>Mission Is To Bring The Power Of Erudex AI To Every Business</h2>
-                    </div>
-                    <div class="about-content">
-                        <ul>
-                            <li>Advance Advisory Team</li>
-                            <li>Advance Quality Experts</li>
-                            <li>Many variations of passages</li>
-                            <li>High-Quality Results</li>
-                        </ul>
-                        <a href="#" class="btn main-btn">About Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- About-section -->
-<!-- Service-section -->
-<section class="service-section pt-100 pb-70" id="services">
-    <div class="container">
-        <div class="section-title section-title-lg">
-            <small>Services</small>
-            <h2>Our Purpose Is To Deliver Excellence <br> In Service And Execution</h2>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-4 pb-30">
-                <div class="service-card">
-                    <div class="service-card-thumb">
-                        <i class="flaticon-automation"></i>
-                    </div>
-                    <div class="service-card-body">
-                        <h3>Robotic Automation</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 pb-30">
-                <div class="service-card">
-                    <div class="service-card-thumb">
-                        <i class="flaticon-predictive-chart"></i>
-                    </div>
-                    <div class="service-card-body">
-                        <h3>Predictive Analytics</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 pb-30">
-                <div class="service-card">
-                    <div class="service-card-thumb">
-                        <i class="flaticon-deep-learning"></i>
-                    </div>
-                    <div class="service-card-body">
-                        <h3>Deep Learning</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 pb-30">
-                <div class="service-card">
-                    <div class="service-card-thumb">
-                        <i class="flaticon-data-mining"></i>
-                    </div>
-                    <div class="service-card-body">
-                        <h3>Data Mining</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 pb-30">
-                <div class="service-card">
-                    <div class="service-card-thumb">
-                        <i class="flaticon-diagram"></i>
-                    </div>
-                    <div class="service-card-body">
-                        <h3>Statistical Modeling</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 pb-30">
-                <div class="service-card">
-                    <div class="service-card-thumb">
-                        <i class="flaticon-machine-learning-2"></i>
-                    </div>
-                    <div class="service-card-body">
-                        <h3>Security & Surveillance</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Service-section -->
-<!-- Choose-section -->
-<section class="choose-section pt-100 pb-70 bg-off-white">
-    <div class="container">
-        <div class="section-title">
-            <small>Why Choose Us</small>
-            <h2>Why People Choose Erudex For ML Services</h2>
-        </div>
-        <div class="process-content">
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-4 pb-30">
-                    <div class="process-item process-item-center border">
-                        <div class="process-thumb">
-                            <img src="{{ asset('images/process/process-four.png') }}" alt="shape">
-                        </div>
-                        <div class="process-text">
-                            <h3>Easy Model Building</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 pb-30">
-                    <div class="process-item process-item-center border">
-                        <div class="process-thumb">
-                            <img src="{{ asset('images/process/process-five.png') }}" alt="shape">
-                        </div>
-                        <div class="process-text">
-                            <h3>Robust ML Production Anywhere</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 pb-30">
-                    <div class="process-item process-item-center border">
-                        <div class="process-thumb">
-                            <img src="{{ asset('images/process/process-six.png') }}" alt="shape">
-                        </div>
-                        <div class="process-text">
-                            <h3>Powerful Experimentation</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Choose-section -->
+<!-- connect wallet modal end -->
 
-<!-- Project-section -->
-<section class="project-section pt-min-100 pb-100 bg-off-white" id="projects">
-    <div class="container">
-        <div class="section-title section-title-lg">
-            <h2>Erudex's Projects In Different Domain Of Industry</h2>
-            <p>Our purpose is to deliver excellence in service and execution Our purpose is to deliver excellence in service and Our purpose is to deliver excellence in service.</p>
-        </div>
-    </div>
-    <div class="container-fluid p-md-0">
-        <div class="project-carousel owl-carousel owl-theme default-carousel">
-            <div class="item">
-                <div class="project-flat-card">
-                    <div class="project-flat-thumb">
-                        <a href="#">
-                            <img src="{{ asset('images/cases/case-lg-1.jpg') }}" alt="project">
-                        </a>
-                    </div>
-                    <div class="project-flat-text">
-                        <h3><a href="#">Drone And Robot Training</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="project-flat-card">
-                    <div class="project-flat-thumb">
-                        <a href="#">
-                            <img src="{{ asset('images/cases/case-lg-3.jpg') }}" alt="project">
-                        </a>
-                    </div>
-                    <div class="project-flat-text">
-                        <h3><a href="#">Data Mining Revolution</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="project-flat-card">
-                    <div class="project-flat-thumb">
-                        <a href="#">
-                            <img src="{{ asset('images/cases/case-lg-2.jpg') }}" alt="project">
-                        </a>
-                    </div>
-                    <div class="project-flat-text">
-                        <h3><a href="#">Automatic Project Management</a></h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Project-section -->
 
-<!-- News-section -->
-<section class="news-section pt-min-100 pb-70" id="news">
+
+<!-- ==========>> Banner Section start Here <<========== -->
+<section class="banner" id="home" style="background-image: url({{ asset('images/banner/bg.png') }});">
     <div class="container">
-        <div class="section-title section-title-lg">
-            <h2>Upcoming News on Erudex AI</h2>
-            <p>Our purpose is to deliver excellence in service and execution Our purpose is to deliver excellence in service and Our purpose is to deliver excellence.</p>
+        <div class="banner__wrapper">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="banner__content" data-aos="fade-right" data-aos-duration="1000">
+                        <h1 class="text-uppercase">TORKGO CHAIN</h1>
+                        <p>The next generation Blockchain ecosystem </p>
+                        <a href="#" class="default-btn"><span class="fab fa-telegram"></span> <span>JOIN US</span></a>
+                        <a href="#" class="default-btn"><span class="fas fa-cart-plus"></span> <span>BUY TORKGO</span></a>
+                        <a href="#" class="default-btn"><span class="fa fa-bar-chart"></span> <span>CHART</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="banner__thumb" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="{{ asset('images/banner/banner-thumb/01.png') }}" alt="banner Image">
+
+                        <div class="shape-2">
+                            <img src="{{ asset('images/banner/banner-thumb/shape3.png') }}" alt="Banner Shape">
+                        </div>
+                        <div class="shape-3">
+                            <img src="{{ asset('images/banner/banner-thumb/shape1.png') }}" alt="Banner Shape">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-4 pb-30">
-                <div class="blog-card">
-                    <div class="blog-card-image">
-                        <a href="#">
-                            <img src="{{ asset('images/blogs/blog-1.jpg') }}" alt="blog">
-                        </a>
-                    </div>
-                    <div class="blog-card-text">
-                        <div class="blog-category">Technology</div>
-                        <h3><a href="#">Is Machine Learning Right Going On Good Way</a></h3>
-                    </div>
+
+    </div>
+</section>
+<!-- ==========>> Banner Section Ends Here <<========== -->
+
+<!-- ==========>> benifits Section start Here <<========== -->
+<section class="benifit padding-top padding-bottom bg--primary-color">
+    <div class="container">
+        <div class="section-header section-header--middle">
+            <div class="section-header__content">
+                <div class="section-header__titlebar">
+                    <p class="section-header__subtitle"> Features</p>
+                    <h2 class="section__header__title">What We Offer</h2>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 pb-30">
-                <div class="blog-card">
-                    <div class="blog-card-image">
-                        <a href="#">
-                            <img src="{{ asset('images/blogs/blog-2.jpg') }}" alt="blog">
-                        </a>
-                    </div>
-                    <div class="blog-card-text">
-                        <div class="blog-category">Robot</div>
-                        <h3><a href="#">The Current State Of Artificial Intelligence Infographic</a></h3>
+        </div>
+        <div class="benifit__wrapper">
+            <div class="row g-5">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="benifit__item">
+                        <div class="benifit__item-inner">
+                            <div class="benifit__item-thumb">
+                                <img src="{{ asset('images/benifit/01.png') }}" alt="Benifit image">
+                            </div>
+                            <div class="benifit__item-content">
+                                <h4>Cross Chain / Bridge</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-0 pb-30">
-                <div class="blog-card">
-                    <div class="blog-card-image">
-                        <a href="single-blog.html">
-                            <img src="{{ asset('images/blogs/blog-3.jpg') }}" alt="blog">
-                        </a>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="benifit__item">
+                        <div class="benifit__item-inner">
+                            <div class="benifit__item-thumb">
+                                <img src="{{ asset('images/benifit/02.png') }}" alt="Benifit image">
+                            </div>
+                            <div class="benifit__item-content">
+                                <h4>Smart Contract Ecosystem</h4>
+                            </div>
+                        </div>
                     </div>
-                    <div class="blog-card-text">
-                        <div class="blog-category">Machine</div>
-                        <h3><a href="#">Our Company As A Global Leader In Big Data</a></h3>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="benifit__item">
+                        <div class="benifit__item-inner">
+                            <div class="benifit__item-thumb">
+                                <img src="{{ asset('images/benifit/03.png') }}" alt="Benifit image">
+                            </div>
+                            <div class="benifit__item-content">
+                                <h4>Wallet & Staking</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="benifit__item">
+                        <div class="benifit__item-inner">
+                            <div class="benifit__item-thumb">
+                                <img src="{{ asset('images/benifit/04.png') }}" alt="Benifit image">
+                            </div>
+                            <div class="benifit__item-content">
+                                <h4>Launchpad</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- News-section -->
-<!-- Newsletter-section -->
-<section class="newsletter-section pt-min-100 pb-100 page-bg page-bg-2 page-bg-overlay">
-    <div class="container position-relative">
-        <div class="section-title section-title-white">
-            <h2>Subscribe For Erudex's Newsletter</h2>
-            <p>Subscribe to our newsletter & stay updated</p>
-        </div>
-        <form class="newsletter-form">
-            <div class="form-group m-0 newsletter-form">
-                <input type="text" name="EMAIL" id="emails" class="form-control" placeholder="Enter Address*" required>
-                <button class="btn main-btn" type="submit">Subscribe</button>
+<!-- ==========>> benifits Section Ends Here <<========== -->
+
+<!-- ==========>> Upcoming Project Section start Here <<========== -->
+<section class="project padding-top padding-bottom">
+    <div class="container">
+        <div class="section-header section-header--left" id="wallet">
+            <div class="section-header__content">
+                <div class="section-header__titlebar">
+                    <p class="section-header__subtitle">
+                        Wallet App
+                    </p>
+                    <h2 class="section__header__title">Upcoming TorkGo Wallet</h2>
+                </div>
             </div>
-            <div id="validator-newsletter" class="form-result"></div>
-        </form>
+        </div>
+
+        <div class="project__wrapper">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    TorkGo Wallet will help you to track your crypto assets
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <img src="{{ asset('images/wallet.png') }}" alt="TorkGo Wallet">
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    &nbsp;
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section-header section-header--left" style="margin-top:100px" id="launchpad">
+            <div class="section-header__content">
+                <div class="section-header__titlebar">
+                    <p class="section-header__subtitle">
+                        LAUNCHPAD LIST
+                    </p>
+                    <h2 class="section__header__title">Upcoming Projects Will be Listed Here</h2>
+                </div>
+                <a href="#" class="default-btn default-btn--small"><span>View all</span> </a>
+            </div>
+        </div>
+
+        <div class="project__wrapper">
+            <div class="swiper project__slider py-2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="project__item">
+                            <div class="project__item-inner">
+                                <div class="project__item-thumb">
+                                    <img src="{{ asset('images/igo/item/01.jpg') }}" alt="IGO cover">
+                                    <span class="badge"><img src="{{ asset('images/favicon.png') }}"
+                                            alt="chain logo"></span>
+                                </div>
+                                <div class="project__item-content">
+                                    <div class="project__item-top">
+                                        <div class="project__item-author">
+                                            <a href="#"><img src="{{ asset('images/favicon.png') }}"
+                                                    alt="author image"></a>
+                                            <h4>Project #1</h4>
+                                        </div>
+
+                                    </div>
+                                    <div class="project__item-middle">
+                                        <ul class="project__infolist">
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Round Name:</p>
+                                                <p class="project__infolist-data">Public</p>
+                                            </li>
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Participent</p>
+                                                <p class="project__infolist-data">0</p>
+                                            </li>
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Project Start</p>
+                                                <p class="project__infolist-data">TBA</p>
+                                            </li>
+                                        </ul>
+
+                                        <div class="project__item-amount">
+                                            <p>Raised Ammount</p>
+                                            <h6><span class="color--theme-color">0</span> / <span>0
+                                                    TORKGO</span>
+                                            </h6>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 25%"
+                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="project__item-bottom">
+
+                                        <a href="#" class="default-btn default-btn--small">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project__item">
+                            <div class="project__item-inner">
+                                <div class="project__item-thumb">
+                                    <img src="{{ asset('images/igo/item/02.jpg') }}" alt="IGO cover">
+                                    <span class="badge"><img src="{{ asset('images/favicon.png') }}"
+                                            alt="chain logo"></span>
+                                </div>
+                                <div class="project__item-content">
+                                    <div class="project__item-top">
+                                        <div class="project__item-author">
+                                            <a href="#"><img src="{{ asset('images/favicon.png') }}"
+                                                    alt="author image"></a>
+                                            <h4>Project #2</h4>
+                                        </div>
+
+                                    </div>
+                                    <div class="project__item-middle">
+                                        <ul class="project__infolist">
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Round Name:</p>
+                                                <p class="project__infolist-data">Public</p>
+                                            </li>
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Participent</p>
+                                                <p class="project__infolist-data">0</p>
+                                            </li>
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Project Start</p>
+                                                <p class="project__infolist-data">TBA</p>
+                                            </li>
+                                        </ul>
+
+                                        <div class="project__item-amount">
+                                            <p>Raised Ammount</p>
+                                            <h6><span class="color--theme-color">0</span> / <span>0
+                                                    TORKGO</span>
+                                            </h6>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 25%"
+                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="project__item-bottom">
+
+                                        <a href="#" class="default-btn default-btn--small">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project__item">
+                            <div class="project__item-inner">
+                                <div class="project__item-thumb">
+                                    <img src="{{ asset('images/igo/item/03.jpg') }}" alt="IGO cover">
+                                    <span class="badge"><img src="{{ asset('images/favicon.png') }}"
+                                            alt="chain logo"></span>
+                                </div>
+                                <div class="project__item-content">
+                                    <div class="project__item-top">
+                                        <div class="project__item-author">
+                                            <a href="#"><img src="{{ asset('images/favicon.png') }}"
+                                                    alt="author image"></a>
+                                            <h4>Project #3</h4>
+                                        </div>
+
+                                    </div>
+                                    <div class="project__item-middle">
+                                        <ul class="project__infolist">
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Round Name:</p>
+                                                <p class="project__infolist-data">Public</p>
+                                            </li>
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Participent</p>
+                                                <p class="project__infolist-data">0</p>
+                                            </li>
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Project Start</p>
+                                                <p class="project__infolist-data">TBA</p>
+                                            </li>
+                                        </ul>
+
+                                        <div class="project__item-amount">
+                                            <p>Raised Ammount</p>
+                                            <h6><span class="color--theme-color">0</span> / <span>0
+                                                    TORKGO</span>
+                                            </h6>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 25%"
+                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="project__item-bottom">
+
+                                        <a href="#" class="default-btn default-btn--small">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project__item">
+                            <div class="project__item-inner">
+                                <div class="project__item-thumb">
+                                    <img src="{{ asset('images/igo/item/04.jpg') }}" alt="IGO cover">
+                                    <span class="badge"><img src="{{ asset('images/favicon.png') }}"
+                                            alt="chain logo"></span>
+                                </div>
+                                <div class="project__item-content">
+                                    <div class="project__item-top">
+                                        <div class="project__item-author">
+                                            <a href="#"><img src="{{ asset('images/favicon.png') }}"
+                                                    alt="author image"></a>
+                                            <h4>Project #4</h4>
+                                        </div>
+
+                                    </div>
+                                    <div class="project__item-middle">
+                                        <ul class="project__infolist">
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Round Name:</p>
+                                                <p class="project__infolist-data">Public</p>
+                                            </li>
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Participent</p>
+                                                <p class="project__infolist-data">0</p>
+                                            </li>
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Project Start</p>
+                                                <p class="project__infolist-data">TBA</p>
+                                            </li>
+                                        </ul>
+
+                                        <div class="project__item-amount">
+                                            <p>Raised Ammount</p>
+                                            <h6><span class="color--theme-color">0</span> / <span>0
+                                                    TORKGO</span>
+                                            </h6>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 25%"
+                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="project__item-bottom">
+
+                                        <a href="#" class="default-btn default-btn--small">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project__item">
+                            <div class="project__item-inner">
+                                <div class="project__item-thumb">
+                                    <img src="{{ asset('images/igo/item/05.jpg') }}" alt="IGO cover">
+                                    <span class="badge"><img src="{{ asset('images/favicon.png') }}"
+                                            alt="chain logo"></span>
+                                </div>
+                                <div class="project__item-content">
+                                    <div class="project__item-top">
+                                        <div class="project__item-author">
+                                            <a href="#"><img src="{{ asset('images/favicon.png') }}"
+                                                    alt="author image"></a>
+                                            <h4>Project #5</h4>
+                                        </div>
+
+                                    </div>
+                                    <div class="project__item-middle">
+                                        <ul class="project__infolist">
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Round Name:</p>
+                                                <p class="project__infolist-data">Public</p>
+                                            </li>
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Participent</p>
+                                                <p class="project__infolist-data">0</p>
+                                            </li>
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Project Start</p>
+                                                <p class="project__infolist-data">TBA</p>
+                                            </li>
+                                        </ul>
+
+                                        <div class="project__item-amount">
+                                            <p>Raised Ammount</p>
+                                            <h6><span class="color--theme-color">0</span> / <span>0
+                                                    TORKGO</span>
+                                            </h6>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 25%"
+                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="project__item-bottom">
+
+                                        <a href="#" class="default-btn default-btn--small">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project__slider-pagination mt-4 text-center"></div>
+            </div>
+        </div>
     </div>
 </section>
-<!-- Newsletter-section -->
+<!-- ==========>> Upcoming Project Section Ends Here <<========== -->
+
+<!-- ==========>> work Section start Here <<========== -->
+<section class="work padding-top padding-bottom bg--primary-color">
+    <div class="container">
+        <div class="section-header section-header--middle">
+            <div class="section-header__content">
+                <div class="section-header__titlebar">
+                    <p class="section-header__subtitle"> Upcoming Launchpad </p>
+                    <h2 class="section__header__title"> Simple as 1,2,3</h2>
+                </div>
+            </div>
+        </div>
+        <div class="work__wrapper">
+            <div class="row  justify-content-center g-4">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="work__item">
+                        <div class="work__item-inner">
+                            <div class="work__item-thumb">
+                                <img src="{{ asset('images/work/1.png') }}" alt="work Step 1 Image">
+                            </div>
+                            <div class="work__item-content">
+                                <h4>1.Submit KYC</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="work__item">
+                        <div class="work__item-inner">
+                            <div class="work__item-thumb">
+                                <img src="{{ asset('images/work/2.png') }}" alt="work Step 2 Image">
+                            </div>
+                            <div class="work__item-content">
+                                <h4>2. Verify Project</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="work__item">
+                        <div class="work__item-inner">
+                            <div class="work__item-thumb">
+                                <img src="{{ asset('images/work/3.png') }}" alt="work Step 3 Image">
+                            </div>
+                            <div class="work__item-content">
+                                <h4>3. Start Launchpad</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#launchpad" class="default-btn"><span>Submit Your Project Here</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==========>> work Section Ends Here <<========== -->
+
+<!-- ==========>> Roadmap Section start Here <<========== -->
+<section class="roadmap  padding-bottom" id="roadmap">
+    <div class="container">
+        <div class="section-header section-header--middle">
+            <div class="section-header__content">
+                <div class="section-header__titlebar">
+                    <p class="section-header__subtitle"> Explore</p>
+                    <h2 class="section__header__title">Our Roadmap</h2>
+                </div>
+            </div>
+        </div>
+        <div class="roadmap__wrapper2">
+            <div class="row gy-4 gy-md-0 gx-5">
+                <div class="col-md-6 offset-md-6">
+                    <div class=" roadmap__item2 ms-md-4 aos-init" data-aos="fade-left" data-aos-duration="800">
+                        <div class="roadmap__item2-inner">
+                            <div class="roadmap__item2-content">
+                                <div class="roadmap__item2-header">
+                                    <h4>Token Launch</h4>
+                                    <p>01</p>
+                                </div>
+                                <ul >
+                                    <li>Launch on Pancakeswap</li>
+                                    <li>Website Released</li>
+                                    <li>Whitepaper Creation</li>
+                                    <li>Initial TG Calls Channel</li>
+                                    <li>Shill Contest</li>
+                                    <li>Biggest Buy Contest</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class=" roadmap__item2 ms-auto me-md-4 aos-init" data-aos="fade-right"
+                        data-aos-duration="800">
+                        <div class="roadmap__item2-inner">
+                            <div class="roadmap__item2-content">
+                                <div class="roadmap__item2-header">
+                                    <h4>Marketing</h4>
+                                    <p>02</p>
+                                </div>
+                                <ul >
+                                    <li>Twitter Promotion</li>
+                                    <li>Dextools Trending</li>
+                                    <li>Poocoin Ads</li>
+                                    <li>BscScan Token Update</li>
+                                    <li>Trust Wallet Logo</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6 offset-md-6">
+                    <div class="roadmap__item2 ms-md-4  aos-init" data-aos="fade-left" data-aos-duration="800">
+                        <div class="roadmap__item2-inner">
+                            <div class="roadmap__item2-content">
+                                <div class="roadmap__item2-header">
+                                    <h4>Audit & KYC</h4>
+                                    <p>03</p>
+                                </div>
+                                <ul >
+                                    <li>Smart Contract Audit</li>
+                                    <li>Team KYC</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="roadmap__item2 ms-auto me-md-4  aos-init" data-aos="fade-right"
+                        data-aos-duration="800">
+                        <div class="roadmap__item2-inner">
+                            <div class="roadmap__item2-content">
+                                <div class="roadmap__item2-header">
+                                    <h4>Product Released</h4>
+                                    <p>04</p>
+                                </div>
+                                <ul >
+                                    <li>TORKGO WALLET</li>
+                                    <li>TORKGO STAKING & FARMING</li>
+                                    <li>TORKGO TESTNET</li>
+                                    <li>TORKGO MAINNET</li>
+                                    <li>TORKGO BRIDGE</li>
+                                    <li>TORKGO CONTRACT GENERATOR</li>
+                                    <li>TORKGO LAUNCHPAD</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6 offset-md-6">
+                    <div class="roadmap__item2 ms-md-4  aos-init" data-aos="fade-left" data-aos-duration="800">
+                        <div class="roadmap__item2-inner">
+                            <div class="roadmap__item2-content">
+                                <div class="roadmap__item2-header">
+                                    <h4>Final Phase</h4>
+                                    <p>05</p>
+                                </div>
+                                <ul >
+                                    <li>COINGECKO LISTING</li>
+                                    <li>COINGECKO TRENDING</li>
+                                    <li>COINMARKETCAP LISTING</li>
+                                    <li>COINMARKETCAP TRENDING</li>
+                                    <li>CEX LISTING</li>
+                                    <li>VIRAL MEDIA CAMPAIGN</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==========>> Roadmap Section Ends Here <<========== -->
+
 @stop

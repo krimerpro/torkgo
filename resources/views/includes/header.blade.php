@@ -1,97 +1,72 @@
-<!-- Preloader -->
+<!-- preloader start here -->
 <div class="preloader">
-    <div class="preloader-wrapper">
-        <div class="preloader-content">
-            <div class="blob-1"></div>
-          <div class="blob-2"></div>
+    <div class="preloader__inner">
+        <div class="preloader__icon">
+            <span></span>
+            <span></span>
         </div>
     </div>
 </div>
-<!-- Preloader -->
-<!-- Navbar -->
-<div class="fixed-top bg-white">
-    <div class="navbar-area sticky-black">
-        <div class="container">
-            <div class="mobile-nav">
-                <a href="#" class="mobile-brand">
-                    <img src="{{ asset('images/logo.png') }}" alt="logo" class="logo">
-                </a>
-                <div class="navbar-option">
-                    <div class="navbar-option-item">
-                        <button type="button">
-                            <i class="flaticon-user" ></i>
-                        </button>
-                    </div>
-                    <div class="navbar-option-item side-topbar-option">
-                        <button type="button">
-                            <i class="flaticon-grid" ></i>
-                        </button>
-                    </div>
-                    <div class="navbar-option-item">
-                        <button type="button" class="search-option">
-                            <i class="icofont-search-1"></i>
-                        </button>
+<!-- preloader ending here -->
+
+<!-- ==========Header Section Starts Here========== -->
+<header class="header-section">
+    <div class="container">
+        <div class="header-holder">
+            <div class="header-primary d-flex flex-wrap justify-content-between align-items-center">
+                <div class="brand-logo d-none d-lg-inline-block">
+                    <div class="logo">
+                        <a href="index-2.html">
+                            <img src="{{ asset('images/logo/logo.png') }}" alt="logo">
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="main-nav">
-            <div class="container">
-                <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="#">
-                        <img src="{{ asset('images/logo.png') }}" alt="logo" class="logo">
-                    </a>
-                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-                        <ul class="navbar-nav mx-auto">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">HOME</a>
+                <div class="header-wrapper justify-content-lg-end">
+                    <div class="mobile-logo d-lg-none">
+                        <a href="index-2.html"><img src="{{ asset('images/logo/logo.png') }}" alt="logo"></a>
+                    </div>
+                    <div class="menu-area">
+                        <ul class="menu">
+                            <li><a href="#">Home</a></li>
+
+                            <li><a href="#launchpad">Launchpad</a></li>
+
+                            <li>
+                                <a href="javascript:void(0);">Staking</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Staking</a></li>
+                                    <li><a href="#">Farming</a></li>
+                                </ul>
                             </li>
 
-                            <li class="nav-item">
-                                <a href="#about" class="nav-link">ABOUT US</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#services" class="nav-link">SERVICES</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#projects" class="nav-link">PROJECTS</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#news" class="nav-link">NEWS</a>
+                            <li>
+                                <a href="javascript:void(0);">Ecosystem</a>
+                                <ul class="submenu">
+                                    <li><a href="#wallet">Wallet</a></li>
+                                    <li><a href="#">Bridge</a></li>
+                                    <li><a href="#">Smart Contract Generator</a></li>
+                                    <li><a href="#">TESTNET</a></li>
+                                    <li><a href="#">MAINNET</a></li>
+                                </ul>
                             </li>
                         </ul>
-                    </div>
-                    <div class="navbar-option">
-                        <div class="navbar-option-item">
-                            <a href="#" class="btn main-btn">More Features</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Navbar -->
-<!-- Header -->
-<header class="header header-bg header-bottom-space header-bg-image">
-    <div class="container-fluid p-lg-0 custom-container-fluid">
-        <div class="row m-lg-0 align-items-center">
-            <div class="col-lg-6 p-lg-0">
-                <div class="max-585 ms-lg-auto">
-                    <div class="header-content header-content-white m-0">
-                        <h1>Best Machine Learning Product Creator</h1>
-                        <p>Transforming businesses with Artificial Intelligence</p>
-                        <div class="button-group button-group-animated">
-                            <a href="https://poocoin.app/tokens/0x" class="btn main-btn">Poocoin Chart</a>
-                            <a href="https://t.me/ErudexAiPortal" class="btn main-btn main-btn-white">Telegram Group</a>
+
+                        <a class="wallet-btn" href="#" data-bs-toggle="modal" data-bs-target="#wallet-option">
+                            <span>Connect
+                            </span> <i class="fa-solid fa-wallet"></i></a>
+
+                        <!-- toggle icons -->
+                        <div class="header-bar d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
+
 </header>
-<!-- Header -->
+<!-- ==========Header Section Ends Here========== -->
