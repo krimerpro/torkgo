@@ -44,10 +44,10 @@
                         <h1 class="text-uppercase">TORKGO CHAIN</h1>
                         <p>The next generation Blockchain ecosystem </p>
                         <a href="https://t.me/TorkGoChain" class="default-btn"><span class="fab fa-telegram"></span> <span>JOIN US</span></a>
-                        <a href="https://pancakeswap.finance/swap?outputCurrency=0x" class="default-btn"><span class="fas fa-cart-plus"></span> <span>BUY TORKGO</span></a>
-                        <a href="https://poocoin.app/tokens/0x" class="default-btn"><span class="fa fa-bar-chart"></span> <span>CHART</span></a>
+                        <a href="https://pancakeswap.finance/swap?outputCurrency=0xad6F1E7097C6f4ECB3D68D32d74B80ae565cfA18" class="default-btn"><span class="fas fa-cart-plus"></span> <span>BUY TORKGO</span></a>
+                        <a href="https://poocoin.app/tokens/0xad6F1E7097C6f4ECB3D68D32d74B80ae565cfA18" class="default-btn"><span class="fa fa-bar-chart"></span> <span>CHART</span></a>
                         <div class="row"></div>
-                        Contract Address : <b>0x</b>
+                        Contract Address : <b>0xad6F1E7097C6f4ECB3D68D32d74B80ae565cfA18</b>
                     </div>
                 </div>
                 <div class="col-lg-6">
